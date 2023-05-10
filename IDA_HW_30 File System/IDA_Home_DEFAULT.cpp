@@ -14,6 +14,7 @@ int Get_Int_Positive();			// String-Analysis вариант проверки в�
 //Task 1
 int Write_str_to_file(const std::string& File_path, std::string& user_string_input)
 {
+	
 	std::ofstream write_to_file_stream;
 	write_to_file_stream.open(File_path, std::ios::app);
 
@@ -24,6 +25,7 @@ int Write_str_to_file(const std::string& File_path, std::string& user_string_inp
 		return 1;
 	}
 	//write_to_file_stream.close(); - деструктор сработает при закрытии области видимости функции
+	user_string_input = "New value";
 	return 0;
 }
 int File_COUT(const std::string& File_path)
